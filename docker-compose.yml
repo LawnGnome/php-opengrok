@@ -1,20 +1,13 @@
-version: '2'
+opengrok:
+  image: itszero/opengrok
+  volumes:
+    - source:/src:ro
+  environment:
+    VIRTUAL_HOST: php-lxr.adamharvey.name,lxr.php.net
+    VIRTUAL_PORT: 8080
 
-services:
-  opengrok:
-    image: itszero/opengrok
-    volumes:
-      - source:/src:ro
-    environment:
-      VIRTUAL_HOST: php-lxr.adamharvey.name,lxr.php.net
-      VIRTUAL_PORT: 8080
-
-  updater:
-    build: updater
-    volumes:
-      - ./updater/tasks:/etc/periodic:ro
-      - source:/src
-
-volumes:
-  source:
-    driver: local
+updater:
+  build: updater
+  volumes:
+    - ./updater/tasks:/etc/periodic:ro
+    - source:/src
