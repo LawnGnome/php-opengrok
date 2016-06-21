@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+set -x
+
+cd /src
+for d in master PHP-*; do
+  git pull
+done

@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  opengrok:
+    image: itszero/opengrok
+    ports:
+      - 8080:8080
+    volumes:
+      - source:/src:ro
+
+  updater:
+    build: updater
+    volumes:
+      - ./updater/tasks:/etc/periodic:ro
+      - source:/src
+
+volumes:
+  source:
+    driver: local

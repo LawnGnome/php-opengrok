@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+set -x
+
+if [ ! -d /src/master ]; then
+  mkdir -p /src
+  cd /src
+  /usr/local/bin/clone
+else
+  /etc/periodic/15min/update-git
+fi
+
+crond -f -d 8
