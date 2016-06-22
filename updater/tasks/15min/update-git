@@ -5,5 +5,7 @@ set -x
 
 cd /src
 for d in master PHP-*; do
+  cd "$d"
   git pull
+  cd ..
 done
