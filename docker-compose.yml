@@ -5,6 +5,8 @@ opengrok:
   environment:
     VIRTUAL_HOST: php-lxr.adamharvey.name,lxr.php.net
     VIRTUAL_PORT: 8080
+    LETSENCRYPT_HOST: php-lxr.adamharvey.name
+    LETSENCRYPT_EMAIL: aharvey@php.net
 
 updater:
   build: updater
