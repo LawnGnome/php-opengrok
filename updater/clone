@@ -11,3 +11,4 @@ git-new-workdir master PHP-5.4 PHP-5.4
 git-new-workdir master PHP-5.5 PHP-5.5
 git-new-workdir master PHP-5.6 PHP-5.6
 git-new-workdir master PHP-7.0 PHP-7.0
+git-new-workdir master PHP-7.1 PHP-7.1
