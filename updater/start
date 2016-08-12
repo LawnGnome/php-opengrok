@@ -8,7 +8,7 @@ if [ ! -d /src/master ]; then
   cd /src
   /usr/local/bin/clone
 else
-  /etc/periodic/15min/update-git
+  /etc/periodic/daily/update-git
 fi
 
 crond -f -d 8
